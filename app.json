@@ -20,11 +20,17 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#73B7BA"
+      },
+      "package": "com.codingthumb.todolog"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a0b75c89-c701-48aa-a18f-2cda3258b4cb"
+      }
     }
   }
 }

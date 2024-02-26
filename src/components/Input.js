@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 const Input = styled.TextInput.attrs(({theme})=>({
     placeholderTextColor : theme.placeholder,
 }))`
-    height:60px; margin:10px 0 0 0; padding:0 20px;
+    height:60px; margin:5px 0; padding:0 20px;
     background:${({theme})=>theme.itemBg}; border-radius:15px;
     font-size:18px; color:${({theme})=>theme.text}
-    border:1px solid #666;
+    border:1px solid ${({theme})=>theme.border}
 `;
 
 export const TaskInput = ({placeholder, value, onChangeText, onSubmitEditing, onBlur}) => {
@@ -16,7 +16,7 @@ export const TaskInput = ({placeholder, value, onChangeText, onSubmitEditing, on
         <Input
             placeholder={placeholder}
             value={value}
-            maxLength={50}
+            maxLength={150}
             autoCapitalize='none'
             autoCorrect={false}
             returnKeytype='done'

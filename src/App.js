@@ -85,8 +85,8 @@ const App = () => {
                     <Switch value={isDark} onValueChange={()=>setDark(!isDark)} />
                 </Header>
                 <Container>
-                    <View style={{padding:20}}>
-                        <Tit>오늘 해야할 일을{'\n'}추가해주세요</Tit>
+                    <View style={{paddingHorizontal:20, paddingVertical:10}}>
+                        <Tit>해야할 일을{'\n'}추가해주세요</Tit>
                         <TaskInput
                             placeholder='Enter a Text..'
                             value={newTask}
@@ -95,10 +95,10 @@ const App = () => {
                             onBlur={()=>setnewTask('')}
                         />
                     </View>
-                    <ListArea>
+                    <ListArea contentContainerStyle={{ paddingBottom: 100 }}>
                         {Object.values(tasks)
                             .reverse()
-                            .map(el=>(
+                            .map((el, idx)=>(
                             <Task
                                 key={el.id} el={el}
                                 deleteTask={_delTask}
